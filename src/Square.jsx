@@ -1,4 +1,16 @@
+import { useState } from "react";
 
 export function Square({ value }) {
-  return <button className="square">{value}</button>        
+  const [content, setContent] = useState(value);
+
+  return (
+    <button
+      className="square"
+      onClick={() => {
+        setContent('X')
+      }}
+    >
+      {content}
+    </button>
+  );
 }
