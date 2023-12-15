@@ -11,7 +11,7 @@ export function Square({ value }) {
         setContent('X')
       }}
     >
-      {content}
+      {content || '*'}
     </button>
   );
 }
