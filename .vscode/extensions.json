@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "GitHub.vscode-pull-request-github",
+    "zixuanchen.vitest-explorer",
+    "yoavbls.pretty-ts-errors"
+  ]
+}
