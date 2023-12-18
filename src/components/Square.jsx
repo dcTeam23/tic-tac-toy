@@ -1,17 +1,16 @@
-import { useState } from "react";
+import { useState } from 'react';
 import './Square.css';
 
-export function Square({ value }) {
-  const [content, setContent] = useState(value);
-
+/**
+ * @typedef {{onClick: () => void, value: string}} Props
+ *
+ * @param {Props} param0
+ * @returns
+ */
+export function Square({ onClick, value }) {
   return (
-    <button
-      className="square"
-      onClick={() => {
-        setContent('X')
-      }}
-    >
-      {content}
+    <button className="square" onClick={onClick}>
+      {value}
     </button>
   );
 }

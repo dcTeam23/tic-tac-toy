@@ -1,34 +1,33 @@
-import {useState} from 'react'
-import {Square} from './Square'
-
+import { useState } from 'react';
+import { Square } from './Square';
 
 export function Board() {
-  const SQUARES = [
-    '',  '', '', 
-    '',  '', '', 
-    '', '', ''
+  const SQUARES = ['', '', '', '', '', '', '', '', ''];
 
-  ];
-  
-  const [squares1, setSquare] = useState(SQUARES);
-  
+  const [squares, setSquare] = useState(SQUARES);
+  const [nextIsX, setNextIsX] = useState(true);
+
+  const handleClick = () => {
+    setNextIsX(!nextIsX);
+  };
+
   return (
     <>
       <div>
-        <Square value={squares1[0]}/>
-        <Square value={squares1[1]}/>
-        <Square value={squares1[2]}/>
+        <Square onClick={handleClick} value={squares[0]} />
+        <Square onClick={handleClick} value={squares[1]} />
+        <Square onClick={handleClick} value={squares[2]} />
       </div>
       <div>
-        <Square value={squares1[3]}/>
-        <Square value={squares1[4]}/>
-        <Square value={squares1[5]}/>
+        <Square onClick={handleClick} value={squares[3]} />
+        <Square onClick={handleClick} value={squares[4]} />
+        <Square onClick={handleClick} value={squares[5]} />
       </div>
 
       <div>
-        <Square value={squares1[6]}/>
-        <Square value={squares1[7]}/>
-        <Square value={squares1[8]}/>
+        <Square onClick={handleClick} value={squares[6]} />
+        <Square onClick={handleClick} value={squares[7]} />
+        <Square onClick={handleClick} value={squares[8]} />
       </div>
     </>
   );
