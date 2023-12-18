@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { Board } from './Board';
 
 describe('Board', () => {
@@ -21,6 +21,15 @@ describe('Board', () => {
     });
   });
 
-  it.todo('handle taking turn');
+  it('handle taking turn', () => {
+    const [firstBtn, secondbtn] = utils.getAllByRole('button');
+
+    fireEvent.click(firstBtn);
+    expect(firstBtn).toHaveTextContent('X');
+
+    fireEvent.click(secondbtn);
+    expect(secondbtn).toHaveTextContent('O');
+  });
+
   it.todo('declare winner');
 });
