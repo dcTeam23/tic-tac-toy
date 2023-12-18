@@ -11,6 +11,8 @@ export function Board() {
    * @param {number} i
    */
   const handleClick = (i) => () => {
+    if (squares[i]) return;
+
     if (nextIsX) {
       squares[i] = 'X';
     } else {

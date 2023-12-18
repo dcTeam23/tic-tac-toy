@@ -31,5 +31,14 @@ describe('Board', () => {
     expect(secondbtn).toHaveTextContent('O');
   });
 
+  it('should not allow change a value from a non-empty button', () => {
+    const [firstBtn] = utils.getAllByRole('button');
+
+    fireEvent.click(firstBtn);
+    expect(firstBtn).toHaveTextContent('X');
+
+    fireEvent.click(firstBtn);
+    expect(firstBtn).toHaveTextContent('X');
+  });
   it.todo('declare winner');
 });
