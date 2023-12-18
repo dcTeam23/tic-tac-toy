@@ -4,10 +4,9 @@ import {Square} from './Square'
 
 export function Board() {
   const SQUARES = [
-  
-    '',  'O', 'X', 
-    '',  'O', 'X', 
-    'X', 'O', 'Z'
+    '',  '', '', 
+    '',  '', '', 
+    '', '', ''
 
   ];
   
@@ -16,20 +15,20 @@ export function Board() {
   return (
     <>
       <div>
-        <Square value={squares1[1-1]}/>
-        <Square value={squares1[2-1]}/>
-        <Square value={squares1[3-1]}/>
+        <Square value={squares1[0]}/>
+        <Square value={squares1[1]}/>
+        <Square value={squares1[2]}/>
       </div>
       <div>
-        <Square value={squares1[4-1]}/>
-        <Square value={squares1[5-1]}/>
-        <Square value={squares1[6-1]}/>
+        <Square value={squares1[3]}/>
+        <Square value={squares1[4]}/>
+        <Square value={squares1[5]}/>
       </div>
 
       <div>
-        <Square value={squares1[7-1]}/>
-        <Square value={squares1[8-1]}/>
-        <Square value={squares1[9-1]}/>
+        <Square value={squares1[6]}/>
+        <Square value={squares1[7]}/>
+        <Square value={squares1[8]}/>
       </div>
     </>
   );
